@@ -1,0 +1,28 @@
+; Cargar el archivo .sav
+restore, 'q_data.sav'
+
+; Mostrar las tres imágenes lado a lado
+window, 0, xsize=1200, ysize=400
+!p.multi = [0, 3, 1]
+
+; Mostrar imagen original
+tv, im0, 0
+xyouts, 0.1, 0.95, 'Imagen Original (im0)', /normal, color=255
+
+; Mostrar flat field
+tv, ff0, 1
+xyouts, 0.1, 0.95, 'Flat Field (ff0)', /normal, color=255
+
+; Mostrar dark current
+tv, dd0, 2
+xyouts, 0.1, 0.95, 'Dark Current (dd0)', /normal, color=255
+
+!p.multi = 0
+
+;im0: Imagen del Sol en el continuo rojo, muestra la granulación solar y posiblemente algunas manchas
+
+;ff0: Flat field que muestra las variaciones de sensibilidad del detector
+
+;dd0: Dark current que representa el ruido térmico del CCD
+
+

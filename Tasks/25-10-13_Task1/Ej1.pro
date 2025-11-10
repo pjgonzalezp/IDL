@@ -1,0 +1,25 @@
+;;Exercise 1: Write a program that asks for and reads a number (from 1 to 7)
+;from the keyboard, and that gives as output the corresponding day of the week
+;(MON, TUE, etc.), using a CASE statement. In case that the input is not in the
+;correct range (1 – 7), give a corresponding error message.
+
+PRO days_of_the_week
+  ;Pide un número y muestra el día de la semana correspondiente
+  PRINT, 'Write a number between 1 to 7:'
+  READ, n  ;lee el número y lo asigna a n
+
+	  CASE n OF    ; selecciona segun el n
+	     1: PRINT, 'Monday'
+	     2: PRINT, 'Tuesday'
+	     3: PRINT, 'Wednesday'
+	     4: PRINT, 'Thursday'
+	     5: PRINT, 'Friday'
+	     6: PRINT, 'Saturday'
+	     7: PRINT, 'Sunday'
+	     ELSE: PRINT, 'Error: The number must be between 1 and 7'
+	  ENDCASE
+END
+
+     
+
+
